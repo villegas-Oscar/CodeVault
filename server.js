@@ -16,7 +16,6 @@ app.post('/api/chat', async (req, res) => {
             headers: {
                 'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
                 'Content-Type': 'application/json',
-                // Puedes usar una URL genérica o la de tu dominio de Vercel cuando esté listo
                 'HTTP-Referer': 'https://code-vault-orpin-delta.vercel.app/', 
                 'X-OpenRouter-Title': 'CodeVault'
             },
