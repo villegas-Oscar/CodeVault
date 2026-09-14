@@ -28,7 +28,7 @@ app.post('/api/chat', async (req, res) => {
         const { messages, model } = req.body;
 
         const response = await fetch(
-            '/api/chat',
+            'https://openrouter.ai/api/v1/chat/completions',
             {
                 method: 'POST',
                 headers: {
