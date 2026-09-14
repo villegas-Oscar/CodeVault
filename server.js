@@ -3,7 +3,6 @@ import cors from 'cors';
 import 'dotenv/config';
 
 const app = express();
-const PORT = 3000;
 
 app.use(cors());
 app.use(express.json());
@@ -17,19 +16,18 @@ app.post('/api/chat', async (req, res) => {
             headers: {
                 'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
                 'Content-Type': 'application/json',
-                'HTTP-Referer': 'http://localhost:3000',
+                // Puedes usar una URL genérica o la de tu dominio de Vercel cuando esté listo
+                'HTTP-Referer': 'https://code-vault-orpin-delta.vercel.app/', 
                 'X-OpenRouter-Title': 'CodeVault'
             },
             body: JSON.stringify({
                 model: model || 'openai/gpt-4o-mini',
                 messages: messages
-                // 👇 SIN stream: true
             })
         });
 
         const data = await response.json();
 
-        // 👇 Esto te ayudará a depurar si algo falla
         if (!response.ok) {
             console.error('OpenRouter error:', response.status, data);
         }
@@ -41,6 +39,5 @@ app.post('/api/chat', async (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`Servidor backend escuchando en http://localhost:${PORT}`);
-});
+
+export default app;
