@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const messagesBox = document.getElementById('chatMessages');
 
   // URL del dominio
-  const API_URL = 'http://localhost:3000/api/chat';
+  const API_URL = 'https://code-vault-orpin-delta.vercel.app/';
   const MODEL = 'openai/gpt-4o-mini'; 
 
   // En tu script.js
