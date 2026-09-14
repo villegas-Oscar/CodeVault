@@ -12,8 +12,10 @@ const __dirname = path.dirname(__filename);
 app.use(cors());
 app.use(express.json());
 
-// Servir archivos estáticos
-app.use(express.static(__dirname));
+// Archivos estáticos
+app.use('/css', express.static(path.join(__dirname, 'css')));
+app.use('/js', express.static(path.join(__dirname, 'js')));
+app.use('/img', express.static(path.join(__dirname, 'img')));
 
 // Página principal
 app.get('/', (req, res) => {
@@ -52,6 +54,7 @@ app.post('/api/chat', async (req, res) => {
 
     } catch (error) {
         console.error('Error:', error);
+
         res.status(500).json({
             error: 'Error al contactar con la IA'
         });
