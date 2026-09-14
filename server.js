@@ -34,7 +34,7 @@ app.post('/api/chat', async (req, res) => {
                 headers: {
                     'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
                     'Content-Type': 'application/json',
-                    'HTTP-Referer': 'https://code-vault-orpin-delta.vercel.app/',
+                    'HTTP-Referer': 'https://code-vault-orpin-delta.vercel.app',
                     'X-OpenRouter-Title': 'CodeVault'
                 },
                 body: JSON.stringify({

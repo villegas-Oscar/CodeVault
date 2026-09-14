@@ -1,5 +1,6 @@
 {
   "name": "codevault2.0",
+  "engines": { "node": "18.x" },
   "version": "1.0.0",
   "type": "module",
   "description": "",
@@ -16,4 +17,7 @@
     "express": "^5.2.1",
     "node-fetch": "^3.3.2"
   }
+
 }
+
+
