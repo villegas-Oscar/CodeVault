@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CodeVault — Sitios web que convierten</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a href="#top" class="logo">CodeVault</a>
+
+    <nav class="nav-desktop" aria-label="Navegación principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#trabajo">Trabajo</a>
+      <a href="#opiniones">Opiniones</a>
+    </nav>
+
+    <a href="#contacto" class="btn btn-dark btn-small header-cta">Empecemos</a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="nav-mobile" id="navMobile">
+    <a href="#servicios">Servicios</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#trabajo">Trabajo</a>
+    <a href="#opiniones">Opiniones</a>
+    <a href="#contacto" class="btn btn-dark btn-small">Empecemos</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <p class="hero-eyebrow reveal-item" style="--d:0s">Disponibles para nuevos proyectos</p>
+
+      <div class="hero-chip reveal-item" style="--d:.1s">
+        <svg class="spark-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L13.6 9.2C13.9 10.6 15 11.7 16.4 12L23.5 13.6L16.4 15.2C15 15.5 13.9 16.6 13.6 18L12 25.2L10.4 18C10.1 16.6 9 15.5 7.6 15.2L0.5 13.6L7.6 12C9 11.7 10.1 10.6 10.4 9.2L12 2Z" transform="translate(0 -1.5) scale(0.85)" fill="currentColor"/>
+        </svg>
+      </div>
+
+      <h1 class="hero-heading">
+        <span class="reveal-item" style="--d:.18s">Sitios web que</span>
+        <span class="reveal-item" style="--d:.30s"><em>convierten</em>, no solo</span>
+        <span class="reveal-item" style="--d:.42s">que se ven bien.</span>
+      </h1>
+
+      <p class="hero-sub reveal-item" style="--d:.56s">Diseñamos y desarrollamos sitios y aplicaciones a la medida para empresas que quieren destacar y crecer en línea.</p>
+
+      <div class="hero-actions reveal-item" style="--d:.68s">
+        <a href="#contacto" class="btn btn-dark">Cotiza tu proyecto <span class="arrow">→</span></a>
+        <a href="#trabajo" class="btn btn-light">Ver trabajo</a>
+      </div>
+
+      <div class="hero-stats reveal-item" style="--d:.8s">
+        <div class="stat"><strong>10+</strong><span>Proyectos entregados</span></div>
+        <div class="stat"><strong>2</strong><span>Años de experiencia</span></div>
+        <div class="stat"><strong>98%</strong><span>Clientes satisfechos</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOGOS MARQUEE ============ -->
+  <section class="logos-band">
+    <p class="logos-label reveal" >Confían en nosotros equipos de todo tipo</p>
+    <div class="marquee">
+      <div class="marquee-track" id="marqueeTrack">
+        <!-- icons injected by JS (duplicated for seamless loop) -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICIOS ============ -->
+  <section id="servicios" class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Servicios</p>
+        <h2>Todo lo que necesitas<br>para crecer en línea</h2>
+      </div>
+
+      <div class="grid grid-3 reveal-group">
+        <article class="card reveal-item">
+          <span class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M8 6L2 12L8 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 6L22 12L16 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Desarrollo Web</h3>
+          <p>Aplicaciones web modernas, responsivas y escalables para un máximo rendimiento.</p>
+        </article>
+
+        <article class="card reveal-item">
+          <span class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8V12L15 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Diseño UI/UX</h3>
+          <p>Interfaces claras y atractivas que guían a tus usuarios a la acción.</p>
+        </article>
+
+        <article class="card reveal-item">
+          <span class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="7" y="2" width="10" height="16" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M11 15H13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </span>
+          <h3>Tarjetas de Proximidad</h3>
+          <p>Tarjetas con tencnologia para escalar tu negocio.</p>
+        </article>
+
+        <article class="card reveal-item">
+          <span class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="6" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="3" y="14" width="18" height="6" rx="1.5" stroke="currentColor" stroke-width="1.8"/><path d="M7 7H7.01M7 17H7.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+          <h3>Backend &amp; APIs</h3>
+          <p>Arquitecturas escalables, seguras y listas para crecer contigo.</p>
+        </article>
+
+        <article class="card reveal-item">
+          <span class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3 17L9 11L13 15L21 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 7H21V13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>SEO &amp; Performance</h3>
+          <p>Optimización técnica para posicionarte mejor y cargar más rápido.</p>
+        </article>
+
+        <article class="card reveal-item">
+          <span class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L20 5.5V11C20 16 16.6 19.7 12 21C7.4 19.7 4 16 4 11V5.5L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 11.5L11 13.5L15.5 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Mantenimiento</h3>
+          <p>Soporte continuo, actualizaciones y monitoreo de seguridad.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESO ============ -->
+  <section id="proceso" class="section section-alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Cómo trabajamos</p>
+        <h2>Un proceso claro,<br>de principio a fin</h2>
+      </div>
+
+      <div class="grid grid-4 reveal-group">
+        <div class="step reveal-item">
+          <span class="step-num">01</span>
+          <h3>Descubrimiento</h3>
+          <p>Entendemos tu negocio, objetivos y a quién quieres llegar.</p>
+        </div>
+        <div class="step reveal-item">
+          <span class="step-num">02</span>
+          <h3>Diseño</h3>
+          <p>Prototipamos la experiencia y afinamos cada detalle contigo.</p>
+        </div>
+        <div class="step reveal-item">
+          <span class="step-num">03</span>
+          <h3>Desarrollo</h3>
+          <p>Construimos con código limpio, rápido y escalable.</p>
+        </div>
+        <div class="step reveal-item">
+          <span class="step-num">04</span>
+          <h3>Lanzamiento</h3>
+          <p>Publicamos, monitoreamos y te acompañamos después.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRABAJO ============ -->
+  <section id="trabajo" class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Trabajo destacado</p>
+        <h2>Proyectos que hablan<br>por sí solos</h2>
+      </div>
+
+      <div class="grid grid-3 reveal-group">
+        <article class="work-card reveal-item">
+          <div class="work-thumb thumb-dashboard" aria-hidden="true">
+            <div class="thumb-chart">
+              <span style="--h:35%"></span><span style="--h:55%"></span><span style="--h:40%"></span>
+              <span style="--h:70%"></span><span style="--h:50%"></span><span style="--h:85%"></span>
+              <span style="--h:60%"></span><span style="--h:75%"></span>
+            </div>
+          </div>
+          <p class="work-tag">Plataforma SaaS</p>
+          <h3>Nimbus Analytics</h3>
+          <p class="work-desc">Dashboard de datos en tiempo real con un 40% más de retención.</p>
+        </article>
+
+        <article class="work-card reveal-item">
+          <div class="work-thumb thumb-corp" aria-hidden="true"></div>
+          <p class="work-tag">Sitio corporativo</p>
+          <h3>Estudio Lumen</h3>
+          <p class="work-desc">Presencia digital renovada para un estudio de arquitectura.</p>
+        </article>
+
+        <article class="work-card reveal-item">
+          <div class="work-thumb thumb-ecom" aria-hidden="true"></div>
+          <p class="work-tag">E-commerce</p>
+          <h3>Vertta Store</h3>
+          <p class="work-desc">Tienda en línea con checkout optimizado y +85% en ventas.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS BAND ============ -->
+  <section class="stats-band">
+    <div class="wrap grid grid-4 reveal-group">
+      <div class="stat stat-dark reveal-item"><strong>10+</strong><span>Proyectos entregados</span></div>
+      <div class="stat stat-dark reveal-item"><strong>98%</strong><span>Clientes satisfechos</span></div>
+      <div class="stat stat-dark reveal-item"><strong>2</strong><span>Años de experiencia</span></div>
+      <div class="stat stat-dark reveal-item"><strong>24h</strong><span>Tiempo de respuesta</span></div>
+    </div>
+  </section>
+
+  <!-- ============ OPINIONES ============ -->
+  <section id="opiniones" class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Opiniones</p>
+        <h2>Lo que dicen nuestros clientes</h2>
+      </div>
+
+      <div class="grid grid-3 reveal-group">
+        <figure class="quote-card reveal-item">
+          <span class="quote-mark">&ldquo;</span>
+          <blockquote>Superaron nuestras expectativas en tiempo y calidad. El sitio se ve espectacular en todos los dispositivos.</blockquote>
+          <figcaption><span class="avatar"></span><span><strong>Diego Ramírez</strong><small>CEO, Nimbus</small></span></figcaption>
+        </figure>
+
+        <figure class="quote-card reveal-item">
+          <span class="quote-mark">&ldquo;</span>
+          <blockquote>Profesionales de principio a fin. Entendieron nuestra marca y la tradujeron perfectamente al sitio web.</blockquote>
+          <figcaption><span class="avatar"></span><span><strong>Valentina Cruz</strong><small>Fundadora, Estudio Lumen</small></span></figcaption>
+        </figure>
+
+        <figure class="quote-card reveal-item">
+          <span class="quote-mark">&ldquo;</span>
+          <blockquote>Nuestras ventas online subieron un 65% después del rediseño. La inversión se pagó sola en semanas.</blockquote>
+          <figcaption><span class="avatar"></span><span><strong>Carlos Medina</strong><small>Director, Vertta Store</small></span></figcaption>
+        </figure>
+
+        <figure class="quote-card reveal-item">
+          <span class="quote-mark">&ldquo;</span>
+          <blockquote>Comunicación clara y entregas puntuales. Se nota que les importa el resultado, no solo el contrato.</blockquote>
+          <figcaption><span class="avatar"></span><span><strong>Fernanda López</strong><small>COO, Grupo Alto</small></span></figcaption>
+        </figure>
+
+        <figure class="quote-card reveal-item">
+          <span class="quote-mark">&ldquo;</span>
+          <blockquote>El mejor equipo con el que hemos trabajado. Entienden tanto de diseño como de negocio.</blockquote>
+          <figcaption><span class="avatar"></span><span><strong>Andrés Peña</strong><small>Producto, Tramo App</small></span></figcaption>
+        </figure>
+
+        <figure class="quote-card reveal-item">
+          <span class="quote-mark">&ldquo;</span>
+          <blockquote>Rápidos, atentos y con mucho ojo estético. Nuestro sitio ahora refleja quiénes somos realmente.</blockquote>
+          <figcaption><span class="avatar"></span><span><strong>Sofía Herrera</strong><small>Marketing, Ceres</small></span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Preguntas frecuentes</p>
+        <h2>Todo lo que quieres saber</h2>
+      </div>
+
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>¿Cuánto tarda un proyecto?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a"><p>Depende del alcance, pero un sitio típico toma entre 4 y 8 semanas, y una app entre 2 y 4 meses.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>¿Cómo es el proceso de pago?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a"><p>Trabajamos con un anticipo del 50% para iniciar y el resto se divide en hitos de entrega.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>¿Ofrecen mantenimiento después del lanzamiento?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a"><p>Sí, tenemos planes mensuales de soporte, actualizaciones y monitoreo de seguridad.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>¿Trabajan con negocios fuera de Salamanca?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a"><p>Sí, trabajamos de forma remota con clientes en todo el pais.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>¿Puedo actualizar el diseño yo mismo?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a"><p>Claro, construimos todo el sistema a gusto del cliente.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section id="contacto" class="cta-band">
+    <div class="wrap reveal">
+      <h2>¿Listo para llevar tu negocio al siguiente nivel?</h2>
+      <p>Cuéntanos tu idea y te enviamos una propuesta en menos de 24 horas.</p>
+      <a href="mailto:hola@codevault.mx" class="btn btn-light">Escríbenos ahora <span class="arrow">→</span></a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <p class="logo">CodeVault</p>
+      <p>Desarrollo web a la medida para negocios que quieren destacar.</p>
+    </div>
+    <div>
+      <h4>Compañía</h4>
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#trabajo">Trabajo</a>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <a href="mailto:ov7224@gmail.com">ov7224@gmail.com</a>
+      <a href="tel:+524646540835">+52 464 654 0835</a>
+      <span>Salamanca, Mexico</span>
+    </div>
+
+    <!-- Proximamente cuando tengamos las redes 
+    <div class="footer-social">
+      <a href="#" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-7.1l-5.6-6.9L4.2 22H1l8.1-9.3L0.9 2H8.2l5.1 6.3L18.9 2Zm-1.2 18h1.9L7.4 4H5.4l12.3 16Z"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg></a>
+    </div>
+    -->
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© <span id="year"></span> CodeVault. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- ============ CHAT IA ============ -->
+<button class="chat-toggle" id="chatToggle" aria-label="Abrir chat con IA">
+  <svg class="chat-icon-open" viewBox="0 0 24 24" fill="none">
+    <path d="M21 12C21 16.4 17.4 20 13 20H8L3 22V12C3 7.6 6.6 4 11 4H13C17.4 4 21 7.6 21 12Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    <circle cx="9" cy="12" r="1" fill="currentColor"/>
+    <circle cx="13" cy="12" r="1" fill="currentColor"/>
+    <circle cx="17" cy="12" r="1" fill="currentColor"/>
+  </svg>
+  <svg class="chat-icon-close" viewBox="0 0 24 24" fill="none">
+    <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+</button>
+
+<div class="chat-window" id="chatWindow" aria-hidden="true">
+  <div class="chat-header">
+    <div class="chat-header-info">
+      <span class="chat-status-dot"></span>
+      <div>
+        <strong>Asistente CodeVault</strong>
+        <small>En línea · Respuesta inmediata</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-messages" id="chatMessages">
+    <div class="chat-msg bot">
+      ¡Hola! Soy el asistente de CodeVault. ¿En qué puedo ayudarte hoy? Puedes preguntarme sobre servicios, precios o tiempos de entrega.
+    </div>
+  </div>
+
+  <form class="chat-input-area" id="chatForm">
+    <input type="text" id="chatInput" placeholder="Escribe tu mensaje..." autocomplete="off" />
+    <button type="submit" id="chatSend" aria-label="Enviar mensaje">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 12L20 4L14 20L11 13L4 12Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </form>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
