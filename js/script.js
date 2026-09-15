@@ -109,7 +109,7 @@ let historial = [
 ## Servicios
 - Desarrollo Web: Aplicaciones modernas y responsivas.
 - Diseño UI/UX: Interfaces que guían a la acción.
-- Tarjetas de Proximidad: Tecnología para escalar tu negocio con google reviews y followers de instagram. El precio de cada tarjeta es de 400 mxn
+- Tarjetas de Proximidad: Tecnología para escalar tu negocio con google reviews y followers de instagram, el diseño de la tarjeta solo lleva el nombre del negocio y el logo. El precio de cada tarjeta es de 400 mxn
 - Backend y APIs: Arquitecturas escalables y seguras.
 - SEO y Performance: Optimización técnica.
 - Mantenimiento: Soporte y monitoreo continuo.
