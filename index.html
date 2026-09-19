@@ -23,7 +23,7 @@
       <a href="#opiniones">Opiniones</a>
     </nav>
 
-    <a href="#contacto" class="btn btn-dark btn-small header-cta">Empecemos</a>
+    <a href="#contacto" class="btn btn-dark btn-small header-cta" data-open-form>Empecemos</a>
 
     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -35,7 +35,7 @@
     <a href="#proceso">Proceso</a>
     <a href="#trabajo">Trabajo</a>
     <a href="#opiniones">Opiniones</a>
-    <a href="#contacto" class="btn btn-dark btn-small">Empecemos</a>
+    <a href="#contacto" class="btn btn-dark btn-small" data-open-form>Empecemos</a>
   </div>
 </header>
 
@@ -61,7 +61,7 @@
       <p class="hero-sub reveal-item" style="--d:.56s">Diseñamos y desarrollamos sitios y aplicaciones a la medida para empresas que quieren destacar y crecer en línea.</p>
 
       <div class="hero-actions reveal-item" style="--d:.68s">
-        <a href="#contacto" class="btn btn-dark">Cotiza tu proyecto <span class="arrow">→</span></a>
+        <a href="#contacto" class="btn btn-dark" data-open-form>Cotiza tu proyecto <span class="arrow">→</span></a>
         <a href="#trabajo" class="btn btn-light">Ver trabajo</a>
       </div>
 
@@ -185,13 +185,10 @@
       </div>
 
       <div class="grid grid-3 reveal-group">
+        
         <article class="work-card reveal-item">
           <div class="work-thumb thumb-dashboard" aria-hidden="true">
-            <div class="thumb-chart">
-              <span style="--h:35%"></span><span style="--h:55%"></span><span style="--h:40%"></span>
-              <span style="--h:70%"></span><span style="--h:50%"></span><span style="--h:85%"></span>
-              <span style="--h:60%"></span><span style="--h:75%"></span>
-            </div>
+            <img src="img/WhatsApp Image 2026-09-12 at 10.38.45 PM.jpeg" alt="">
           </div>
           <p class="work-tag">Plataforma SaaS</p>
           <h3>Nimbus Analytics</h3>
@@ -199,7 +196,9 @@
         </article>
 
         <article class="work-card reveal-item">
-          <div class="work-thumb thumb-corp" aria-hidden="true"></div>
+          <div class="work-thumb thumb-corp" aria-hidden="true">
+            <img src="img/Captura.JPG" alt="">
+          </div>
           <p class="work-tag">Sitio corporativo</p>
           <h3>Estudio Lumen</h3>
           <p class="work-desc">Presencia digital renovada para un estudio de arquitectura.</p>
@@ -404,6 +403,97 @@
   </form>
 </div>
 
+<!-- ============ MODAL: FORMULARIO "EMPECEMOS" ============ -->
+<div class="modal-overlay" id="formOverlay">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="formTitle">
+    <button type="button" class="modal-close" id="formClose" aria-label="Cerrar formulario">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg>
+    </button>
+
+    <div class="modal-body" id="modalBody">
+      <p class="eyebrow">Empecemos</p>
+      <h3 id="formTitle">Cuéntanos sobre tu proyecto</h3>
+      <p class="modal-sub">Completa el formulario y te enviamos una propuesta en menos de 24 horas.</p>
+
+      <form id="projectForm" novalidate>
+        <!-- honeypot anti-spam: campo oculto que un humano nunca llena -->
+        <div class="hp-field" aria-hidden="true">
+          <label for="f-hp">No llenar este campo</label>
+          <input type="text" id="f-hp" name="hp" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="f-nombre">Nombre</label>
+            <input type="text" id="f-nombre" name="nombre_contacto" required placeholder="Tu nombre">
+          </div>
+          <div class="field">
+            <label for="f-empresa">Empresa</label>
+            <input type="text" id="f-empresa" name="empresa" required placeholder="Nombre de tu empresa">
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="f-correo">Correo</label>
+            <input type="email" id="f-correo" name="correo" required placeholder="tu@empresa.com">
+          </div>
+          <div class="field">
+            <label for="f-telefono">Teléfono</label>
+            <input type="tel" id="f-telefono" name="telefono" required placeholder="+52 55 1234 5678">
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="f-tipo">Tipo de proyecto</label>
+            <select id="f-tipo" name="tipo_proyecto" required>
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option>Sitio web</option>
+              <option>Tienda en línea</option>
+              <option>App móvil</option>
+              <option>Rediseño</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-presupuesto">Presupuesto estimado</label>
+            <select id="f-presupuesto" name="presupuesto">
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option>Menos de $30,000 MXN</option>
+              <option>$30,000 – $60,000 MXN</option>
+              <option>$60,000 – $120,000 MXN</option>
+              <option>Más de $120,000 MXN</option>
+              <option>Aún no lo sé</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="f-desc">Descripción del proyecto</label>
+          <textarea id="f-desc" name="descripcion" rows="4" required placeholder="Cuéntanos qué necesitas, tus objetivos y alguna referencia..."></textarea>
+        </div>
+
+        <p class="form-error" id="formError"></p>
+
+        <button type="submit" class="btn btn-dark form-submit" id="formSubmit">
+          <span class="btn-label">Enviar solicitud</span>
+        </button>
+      </form>
+    </div>
+
+    <div class="modal-success" id="modalSuccess" hidden>
+      <span class="success-icon">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <h3>¡Listo, recibimos tu solicitud!</h3>
+      <p>Te contactaremos en menos de 24 horas al correo o teléfono que nos compartiste.</p>
+      <button type="button" class="btn btn-light" id="formCloseSuccess">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/config.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

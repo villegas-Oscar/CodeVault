@@ -2,6 +2,12 @@
 // CodeVault — interacciones
 // ============================================
 
+// Inicializar Supabase
+const supabaseClient = supabase.createClient(
+  SUPABASE_CONFIG.url,
+  SUPABASE_CONFIG.anonKey
+);
+
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ---- Año en footer ---- */
@@ -76,6 +82,86 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  /* ---- Modal: formulario "Empecemos" ---- */
+  const overlay = document.getElementById('formOverlay');
+  const modalBody = document.getElementById('modalBody');
+  const modalSuccess = document.getElementById('modalSuccess');
+  const form = document.getElementById('projectForm');
+  const submitBtn = document.getElementById('formSubmit');
+  const submitLabel = submitBtn ? submitBtn.querySelector('.btn-label') : null;
+  const errorEl = document.getElementById('formError');
+
+  function openModal(e) {
+    if (e) e.preventDefault();
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    setTimeout(() => {
+      modalBody.hidden = false;
+      modalSuccess.hidden = true;
+      form.reset();
+      errorEl.classList.remove('show');
+      errorEl.textContent = '';
+    }, 300);
+  }
+
+  document.querySelectorAll('[data-open-form]').forEach(btn => btn.addEventListener('click', openModal));
+  document.getElementById('formClose').addEventListener('click', closeModal);
+  document.getElementById('formCloseSuccess').addEventListener('click', closeModal);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('open')) closeModal();
+  });
+
+  form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  errorEl.classList.remove('show');
+
+  // honeypot
+  if (form.hp.value) return;
+
+  if (!supabaseClient) {
+    errorEl.textContent = 'Error de configuración. Intenta más tarde.';
+    errorEl.classList.add('show');
+    return;
+  }
+
+  const payload = {
+    nombre_contacto: form.nombre_contacto.value.trim(),
+    empresa: form.empresa.value.trim(),
+    correo: form.correo.value.trim(),
+    telefono: form.telefono.value.trim(),
+    tipo_proyecto: form.tipo_proyecto.value,
+    presupuesto: form.presupuesto.value || null,
+    descripcion: form.descripcion.value.trim(),
+  };
+
+  submitBtn.disabled = true;
+  if (submitLabel) submitLabel.textContent = 'Enviando...';
+
+  const { error } = await supabaseClient
+    .from('solicitudes_proyecto')
+    .insert([payload]);
+
+  submitBtn.disabled = false;
+  if (submitLabel) submitLabel.textContent = 'Enviar solicitud';
+
+  if (error) {
+    console.error(error);
+    errorEl.textContent = 'Hubo un problema al enviar tu solicitud. Intenta de nuevo.';
+    errorEl.classList.add('show');
+    return;
+  }
+
+  modalBody.hidden = true;
+  modalSuccess.hidden = false;
+});
+
 
 });
 
@@ -192,3 +278,4 @@ let historial = [
     }
   });
 })();
+
