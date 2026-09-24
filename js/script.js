@@ -3,7 +3,8 @@
 // ============================================
 
 // Inicializar Supabase
-const supabaseClient = supabase.createClient(
+const { createClient } = supabase;
+const supabaseClient = createClient(
   SUPABASE_CONFIG.url,
   SUPABASE_CONFIG.anonKey
 );
