@@ -1,26 +1,11 @@
 import express from 'express';
 import cors from 'cors';
 import 'dotenv/config';
-import path from 'path';
-import { fileURLToPath } from 'url';
 
 const app = express();
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 app.use(cors());
 app.use(express.json());
-
-// Archivos estáticos
-app.use('/css', express.static(path.join(__dirname, 'css')));
-app.use('/js', express.static(path.join(__dirname, 'js')));
-app.use('/img', express.static(path.join(__dirname, 'img')));
-
-// Página principal
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
 
 // API de IA
 app.post('/api/chat', async (req, res) => {
@@ -54,11 +39,23 @@ app.post('/api/chat', async (req, res) => {
 
     } catch (error) {
         console.error('Error:', error);
-
-        res.status(500).json({
-            error: 'Error al contactar con la IA'
-        });
+        res.status(500).json({ error: 'Error al contactar con la IA' });
     }
 });
+
+// Para desarrollo local (Vercel lo ignora)
+if (process.env.NODE_ENV !== 'production') {
+    const path = await import('path');
+    const { fileURLToPath } = await import('url');
+    const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+    app.use('/css', express.static(path.join(__dirname, 'css')));
+    app.use('/js', express.static(path.join(__dirname, 'js')));
+    app.use('/img', express.static(path.join(__dirname, 'img')));
+    app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
+
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => console.log(`Servidor en http://localhost:${PORT}`));
+}
 
 export default app;
