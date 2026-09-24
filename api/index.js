@@ -43,19 +43,4 @@ app.post('/api/chat', async (req, res) => {
     }
 });
 
-// Para desarrollo local (Vercel lo ignora)
-if (process.env.NODE_ENV !== 'production') {
-    const path = await import('path');
-    const { fileURLToPath } = await import('url');
-    const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-    app.use('/css', express.static(path.join(__dirname, 'css')));
-    app.use('/js', express.static(path.join(__dirname, 'js')));
-    app.use('/img', express.static(path.join(__dirname, 'img')));
-    app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
-
-    const PORT = process.env.PORT || 3000;
-    app.listen(PORT, () => console.log(`Servidor en http://localhost:${PORT}`));
-}
-
 export default app;
