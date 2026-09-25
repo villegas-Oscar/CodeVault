@@ -197,10 +197,7 @@ button{ font-family:inherit; }
 .thumb-corp{ background:linear-gradient(160deg,#efece7,#d8d4cc); }
 
 .thumb-ecom{ background:linear-gradient(160deg,#e7efe6,#cfe0d3); }
-.thumb-ecom::after{
-  content:""; position:absolute; left:20%; right:20%; top:22%; bottom:22%;
-  border-radius:50%; background:radial-gradient(circle at 35% 30%, rgba(255,255,255,.6), rgba(19,18,23,0.06));
-}
+
 .work-tag{ color:var(--accent); font-weight:700; font-size:12.5px; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:8px; }
 .work-card h3{ font-size:19px; margin-bottom:8px; }
 .work-desc{ color:var(--muted); font-size:14.5px; line-height:1.6; }
@@ -553,3 +550,12 @@ button{ font-family:inherit; }
   .modal-card{ padding:30px 22px; }
 }
 
+.Logo1{
+  width: 180px;
+}
+
+.video_IA{
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+}
